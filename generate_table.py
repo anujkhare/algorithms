@@ -12,9 +12,11 @@ For each question, there is some meta-data in the comments of the `.py` file its
 Supported tags are listed in the code below.
 """
 
+from tabulate import tabulate
 from typing import Dict
 import pathlib
 import pandas as pd
+
 
 SUPPORTED_FIELDS = [
     'Name',
@@ -66,6 +68,9 @@ def main():
     df = get_df_from_folders('solutions')
     df.fillna('', inplace=True)
     df[SUPPORTED_FIELDS].to_csv('table.csv')
+    md_table = tabulate(df, tablefmt='pipe')
+    with open('table.md', 'w') as f:
+        f.write(md_table)
     # md = parse_file(pathlib.Path('solutions/Arrays/Anti Diagonals.py'))
     # print(md)
 
