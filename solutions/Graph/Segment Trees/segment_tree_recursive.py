@@ -1,3 +1,13 @@
+## Website:: Self
+## Link::
+## Topic:: Graph
+## Sub-topic:: Segment Tree
+## Difficulty:: Medium
+## Approach:: Recursively split the interval into two smaller intervals
+## Time complexity:: insert: O(N logN), update: O(logN), query: O(logN)
+## Space complexity:: O(2*N)
+## Notes::
+## Bookmarked: Yes
 import collections
 
 
