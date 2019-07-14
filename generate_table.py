@@ -69,6 +69,7 @@ def main():
     df.fillna('', inplace=True)
     df = df[SUPPORTED_FIELDS]
     df.sort_values(by=['Topic', 'Sub-topic', 'Difficulty'], ascending=True, inplace=True)
+    df.reset_index(inplace=True, drop=True)
     md_table = tabulate(df, tablefmt='pipe', headers='keys')
     with open('table.md', 'w') as f:
         f.write(md_table)
