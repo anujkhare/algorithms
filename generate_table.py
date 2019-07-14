@@ -50,7 +50,7 @@ def parse_file(path_to_file: pathlib.Path) -> Dict[str, str]:
 
         metadata[field] = value
 
-    metadata['Name'] = path_to_file.name
+    metadata['Name'] = path_to_file.stem
     metadata['Topic'] = path_to_file.parent.name
 
     return metadata
