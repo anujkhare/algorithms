@@ -3,9 +3,9 @@
 ## Topic:: Arrays
 ## Sub-topic:: Hashing
 ## Difficulty:: Easy
-## Approach:: Store the words from both sides, compare
+## Approach:: Just iterate over the nth column and row at the same time while comparing
 ## Time complexity:: O(N^2)
-## Space complexity:: O(N^2)
+## Space complexity:: O(1)
 ## Notes:: 
 ## Bookmarked: No
 

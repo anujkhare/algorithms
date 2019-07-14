@@ -67,13 +67,11 @@ def get_df_from_folders(folder_path: str) -> pd.DataFrame:
 def main():
     df = get_df_from_folders('solutions')
     df.fillna('', inplace=True)
-    # df[SUPPORTED_FIELDS].to_csv('table.csv')
     df = df[SUPPORTED_FIELDS]
+    df.sort_values(by=['Topic', 'Sub-topic', 'Difficulty'], ascending=True, inplace=True)
     md_table = tabulate(df, tablefmt='pipe', headers='keys')
     with open('table.md', 'w') as f:
         f.write(md_table)
-    # md = parse_file(pathlib.Path('solutions/Arrays/Anti Diagonals.py'))
-    # print(md)
 
 
 if __name__ == '__main__':
