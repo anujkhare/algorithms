@@ -13,6 +13,7 @@ Supported tags are listed in the code below.
 """
 
 from tabulate import tabulate
+from tqdm import tqdm
 from typing import Dict
 import pathlib
 import pandas as pd
@@ -58,7 +59,7 @@ def parse_file(path_to_file: pathlib.Path) -> Dict[str, str]:
 
 def get_df_from_folders(folder_path: str) -> pd.DataFrame:
     all_data = []
-    for path_to_file in pathlib.Path(folder_path).glob('**/*.py'):
+    for path_to_file in tqdm(list(pathlib.Path(folder_path).glob('**/*.py'))):
         all_data.append(parse_file(path_to_file))
 
     return pd.DataFrame(all_data)
