@@ -7,3 +7,5 @@
 - union find
     - https://leetfree.com/problems/number-of-islands-ii.html
     - https://leetcode.com/articles/redundant-connection/
+- Quickselect
+- Maximum flow/ min cost
