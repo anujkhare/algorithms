@@ -1,7 +1,7 @@
 ## Website:: Leetfree
 ## Link:: https://leetfree.com/problems/group-shifted-strings.html
 ## Topic:: Hashing
-## Sub-topic:: Strings
+## Sub-topic:: Key formation
 ## Difficulty:: Medium
 ## Approach:: Find the hash of each string by making the first character an 'a'. Keep adding all the other strings to the same list.
 ## Time complexity:: O(N)

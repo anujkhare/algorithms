@@ -1,5 +1,5 @@
 ## Website:: Leetfree, Interviewbit
-## Link:: https://leetfree.com/problems/merge-k-sorted-lists.html#approach-3-optimize-approach-2-by-priority-queue-accepted
+## Link:: https://www.interviewbit.com/problems/merge-k-sorted-lists
 ## Topic:: Heaps
 ## Sub-topic:: Min Heap
 ## Difficulty:: Medium
@@ -9,3 +9,34 @@
 ## Notes:: Could also do with just K pointers, but the time complexity would be O(NK)
 ## Bookmarked:: No
 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+import heapq
+
+
+class Solution:
+    # @param A : list of linked list
+    # @return the head node in the linked list
+    def mergeKLists(self, A):
+        k = len(A)
+        if k == 0:
+            return 
+        head = ListNode(0)
+        
+        heap = [(node.val, node) for node in A if node is not None]
+        heapq.heapify(heap)
+        
+        p = head
+        while len(heap) > 0:
+            _, node = heapq.heappop(heap)
+            p.next = node
+            p = node
+            
+            if node.next:
+                heapq.heappush(heap, (node.next.val, node.next))
+            node.next = None
+
+        return head.next
