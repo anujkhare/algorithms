@@ -1,0 +1,9 @@
+- binary indexed trees: 
+    - https://www.topcoder.com/community/competitive-programming/tutorials/binary-indexed-trees/
+    - https://leetfree.com/problems/range-sum-query-2d-mutable.html
+- Topological sort
+    - https://leetfree.com/problems/alien-dictionary.html
+    - https://www.geeksforgeeks.org/all-topological-sorts-of-a-directed-acyclic-graph/
+- union find
+    - https://leetfree.com/problems/number-of-islands-ii.html
+    - https://leetcode.com/articles/redundant-connection/
